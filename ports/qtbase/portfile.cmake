@@ -87,6 +87,7 @@ FEATURES
     "gui"                 FEATURE_gui
     "thread"              FEATURE_thread
     "network"             FEATURE_network
+    "shared"              FEATURE_shared
     "sql"                 FEATURE_sql
     "widgets"             FEATURE_widgets
     #"xml"                 FEATURE_xml  # Required to build moc
@@ -111,6 +112,10 @@ endif()
 
 if(VCPKG_QT_NAMESPACE)
     list(APPEND FEATURE_OPTIONS "-DQT_NAMESPACE:STRING=${VCPKG_QT_NAMESPACE}")
+endif()
+
+if("shared" IN_LIST FEATURES
+    list(APPEND FEATURE_OPTIONS -DBUILD_SHARED_LIBS=ON)
 endif()
 
 # Corelib features:

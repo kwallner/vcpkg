@@ -403,6 +403,9 @@
       "description": "Enable Secure Transport",
       "supports": "ios | osx"
     },
+    "shared": {
+      "description": "Build Qt dynamically (shared)"
+    },
     "shared-mime-info": {
       "description": "Use GPL licensed shared-mime-info port from freedesktop.org",
       "dependencies": [
